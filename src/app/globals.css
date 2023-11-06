@@ -8,7 +8,7 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
@@ -16,12 +16,32 @@
   }
 }
 
+header {
+  color: #c1c3d0;
+  background-color: rebeccapurple;
+
+}
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+
+  background-color: white;
+}
+
+.navbar {
+  display: contents;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 300;
+}
+
+header img {
+  display: flex;
+  width: auto; /* Allow the width to adjust based on the image's intrinsic aspect ratio */
+  max-height: 100px; /* Set a maximum height for the image, adjust as needed */
+  margin-right: 10px; /* Adds space between the image and other Navbar content */
+}
+
+@media (max-width: 768px) {
+  header img {
+    max-height: 50px; /* Adjust for smaller screens */
+  }
 }
